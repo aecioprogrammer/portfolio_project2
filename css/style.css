@@ -56,6 +56,10 @@ header .container img {
   height: 30px;
 }
 
+#checkbox-menu {
+  display: none;
+}
+
 main {
   margin-bottom: 100px;
 }
@@ -179,5 +183,4 @@ main .container img {
   align-items: center;
   margin: 100px auto;
   max-width: 980px;
-  
 }
