@@ -29,11 +29,12 @@
   }
 }
 
+/* Bloco desnecessário com a mudança no header
 @media (min-height: 631px){
     .container-menu {
         display: none;
     }
-}
+}*/
 
 @media (max-width: 630px) {
 
