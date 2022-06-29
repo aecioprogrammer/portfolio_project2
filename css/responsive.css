@@ -12,20 +12,20 @@
   }
 
   form {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      align-items: center;
-      padding-top: 30px;
-      /*text-align: center;*/
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 30px;
+    /*text-align: center;*/
   }
 
   input {
-      margin: 10px;
+    margin: 10px;
   }
 
   .container {
-      padding: 0px 10px;
+    padding: 0px 10px;
   }
 }
 
@@ -37,11 +37,12 @@
 }*/
 
 @media (max-width: 630px) {
+  /*nav,*/
+  main .container-menu img {
+    display: none;
+  }
 
-    nav, main .container-menu img {
-        display: none;
-    }
-
+  /* blocos desnecesários
     .container-menu {
         height: 100%;
         display: flex;
@@ -54,49 +55,93 @@
         opacity: 0;
     }
 
-    label {
-        position: relative;
-        cursor: pointer;
-        height: 22px;
-        width: 30px;
-        display: block;
+*/
+  menu-button-container {
+    display: flex;
+  }
 
-    }
+  .menu {
+    position: absolute;
+    margin-top: 30px;
+    margin-right: 0px;
+    padding: 0px;
+    flex-direction: column;
+    width: 100%;
+    justify-content: right;
+    /*align-items: center;*/
+    left: 100%;
+    transform: translateX(100vw);
+    transition: 0.5s ease transform;
+  }
 
-    label span {
-        position: absolute;
-        display: inherit;
-        height: 5px;
-        width: 100%;
-        background: white;
-        border-radius: 30px;
-        transition: 0.25s ease-in-out;
-    }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0px;
+    color: white;
+    background-color: #0080ed;
+    border-radius: 5px;
+  }
 
-    label span:nth-child(1) {
-        top: 0;
-    }
+  .menu > li:not(:last-child) {
+    border-bottom: 1px solid white;
+  }
 
-    label span:nth-child(2) {
-        top: 8px;
-    }
+  .menu li a {
+    flex: 1;
+    text-align: center;
+  }
 
-    label span:nth-child(3) {
-        top: 16px;
-    }
+  label {
+    position: relative;
+    cursor: pointer;
+    height: 22px;
+    width: 30px;
+    display: block;
+  }
 
-    #checkbox-menu:checked + label span:nth-child(1) {
-        transform: rotate(-45deg);
-        top: 8px;
-    }
-    #checkbox-menu:checked + label span:nth-child(2) {
-        display: none;
-        opacity: 0;
-    }
-    #checkbox-menu:checked + label span:nth-child(3) {
-        transform: rotate(45deg);
-        top: 8px;
-    }
-    
+  label span {
+    position: absolute;
+    display: inherit;
+    height: 5px;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+    transition: 0.25s ease-in-out;
+  }
 
+  label span:nth-child(1) {
+    top: 0;
+  }
+
+  label span:nth-child(2) {
+    top: 8px;
+  }
+
+  label span:nth-child(3) {
+    top: 16px;
+  }
+
+  #checkbox-menu:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 8px;
+  }
+  #checkbox-menu:checked + label span:nth-child(2) {
+    display: none;
+    opacity: 0;
+  }
+  #checkbox-menu:checked + label span:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px;
+  }
+
+  nav.menu {
+    width: 100%;
+  }
+
+  #checkbox-menu:checked ~ nav .menu {
+    transform: translateX(-100vw);
+    transition: 0.5s ease transform;
+  }
 }
