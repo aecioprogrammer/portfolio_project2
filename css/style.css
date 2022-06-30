@@ -93,7 +93,7 @@ form {
 form input {
   width: 380px;
   padding-left: 15px;
-  font-size: 18;
+  font-size: 18px;
   height: 45px;
   margin-bottom: 13px;
   border-radius: 20px;
@@ -138,7 +138,7 @@ a {
 .text-medium {
   font-size: 16px;
   line-height: 26px;
-  font-weight: 400px;
+  font-weight: 400;
   color: rgb(187, 185, 185);
 }
 
